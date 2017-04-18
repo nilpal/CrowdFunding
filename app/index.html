@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html style="width: 100%">
+<head>
+  <title>Simple CrowdFunding Demo</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>Crowd Funding Demo</h1>  
+  <div id="accountList"></div>  
+  <div style="border: 1px solid black; padding: 5px">    
+    <h3>Contract Info</h3>
+    Owner Address: <span id="ownerAcct"></span><br />
+    Contract Balance: <span class="black"><span id="balance"></span> eth</span><br />
+    Fund Progress: <progress id="fundProgress" max="100" value="0"></progress>
+  </div>
+  <br>
+  <h1>Fund Project</h1>
+  <br><label for="fundingAccount">From:</label>
+  <select id="fundingAccount"></select>
+  <br><label for="amount">Amount:</label><input type="text" id="amount" placeholder="e.g., 95"></input>
+  <br><br><button id="send" onclick="App.fundProject()">Send Money</button>
+  <br><br>
+  <h1>Refund Money</h1>
+  <br><label for="receiver">Account:</label>
+  <select id="receiver"></select>
+  <br><br><button id="refund" onclick="App.refundMoney()">Refund Money</button>
+  <br><br>
+  <span id="status"></span>
+  <br>  
+</body>
+</html>
